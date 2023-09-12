@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  /* width: 90%; */
+  background-color: #8B0000;
+ /* what is padding?  */
+  padding: 1rem;
+}
+header a {
+  color: #ffffff;
+  font-weight: bold;
+  /* what is text-decoration */
+  text-decoration: none;
+}
+
+main {
+  /* width: 90%; */
+  padding: 1rem;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product {    
+  margin: 1rem;
+  width: 20rem;
+  height: 42rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* border: 1px #404040 solid; */
+  
+}
+.product img {
+  width: 100%; /* Make the image width 100% of the parent div */
+
+}
+
+.product-info {
+  /* border: 1px #404040 solid; */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  /* justify-content: center; */
+}
+.img-thumbnail {
+  height: 80px;
+}
+.small-container {
+  max-width: 600px;
+}
