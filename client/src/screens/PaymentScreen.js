@@ -43,8 +43,8 @@ const CheckoutForm = () => {
       elements,
       clientSecret,
       confirmParams: {
-        // return_url: `https://vinci-store-4ftc.onrender.com/order/${orderId}`
-        return_url: `http://localhost:3000/order/${orderId}`
+        return_url: `https://vinci-store-4ftc.onrender.com/order/${orderId}`
+        // return_url: `http://localhost:3000/order/${orderId}`
       }
     });
     
