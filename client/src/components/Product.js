@@ -43,7 +43,7 @@ function Product (props) {
             Out of stock
           </Button>
         ) : (
-          <Button onClick={() => addToCartHandler(product)}>Buy Now</Button>
+          <Button onClick={() => addToCartHandler(product)}>Add to Cart</Button>
         )}
           </div>
       </div>

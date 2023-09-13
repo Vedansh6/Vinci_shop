@@ -25,6 +25,7 @@ function reducer(state, action) {
       return state;
   }
 }
+
 export default function OrderScreen() {
   const { state } = useContext(Store);
   const { userInfo } = state;
@@ -43,16 +44,15 @@ export default function OrderScreen() {
     error: '',
   });
 
-
-  
-
  
+
+
     useEffect(() => {
     const updateSuccess = async ()=>{
       if(status=== 'succeeded'){
-        
-        const {data} = await axios.put(`/api/orders/${orderId}/${clientSecret}`);
-    }}
+          const {data} = await axios.put(`/api/orders/${orderId}/${clientSecret}`);
+      }
+    }
     updateSuccess();
   }, []);
 
@@ -120,9 +120,9 @@ export default function OrderScreen() {
           <Card className="mb-3">
             <Card.Body>
               <Card.Title>Payment</Card.Title>
-              {order.isPaid ? (
+              {status=="succeeded" || order.isPaid ? (
                 <MessageBox variant="success">
-                  Paid at {order.paidAt}
+                  Paid
                 </MessageBox>
               ) : (
                 <MessageBox variant="danger">Not Paid</MessageBox>
@@ -198,7 +198,7 @@ export default function OrderScreen() {
             {!order.isPaid ? 
             (<Button variant='danger' onClick={paymentHandler}>Pay</Button>
             ):(
-              <Button variant='danger'></Button>
+              <div></div>
 
             )}
           </Row>

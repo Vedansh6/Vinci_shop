@@ -34,26 +34,15 @@ function App() {
       <div>
       <ToastContainer position="bottom-center" limit={1} />
         <header>
-        <Navbar variant="dark">
+        <Navbar variant="dark" className='nav'>
           {/* what is variant? */}
             {/* <Container> */}
               <LinkContainer to="/"> 
                 <Navbar.Brand>Vinci</Navbar.Brand>
               </LinkContainer>
-              <Nav className="me-auto">
-                <Link to="/cart" className="nav-link">
-                  Cart
-                  {cart.cartItems.length > 0 && (
-                    <Badge pill bg="danger">
-                      {cart.cartItems.length}
-                    </Badge>
-                  )}
-                </Link>
+              <Nav className="ms-auto">
                 {userInfo ? (
                   <NavDropdown title={userInfo.name} id="basic-nav-dropdown">
-                    <LinkContainer to="/profile">
-                      <NavDropdown.Item>User Profile</NavDropdown.Item>
-                    </LinkContainer>
                     <LinkContainer to="/orderhistory">
                       <NavDropdown.Item>Order History</NavDropdown.Item>
                     </LinkContainer>
@@ -71,6 +60,14 @@ function App() {
                     Sign In
                   </Link>
                 )}
+                <Link to="/cart" className="nav-link">
+                   Cart
+                  {cart.cartItems.length > 0 && (
+                    <Badge pill bg="danger">
+                      {cart.cartItems.length}
+                    </Badge>
+                  )}
+                </Link>
               </Nav>
             {/* </Container> */}
           </Navbar>

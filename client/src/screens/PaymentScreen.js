@@ -43,7 +43,8 @@ const CheckoutForm = () => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: `https://vinci-store-4ftc.onrender.com/order/${orderId}`
+        // return_url: `https://vinci-store-4ftc.onrender.com/order/${orderId}`
+        return_url: `http://localhost:3000/order/${orderId}`
       }
     });
     
@@ -51,7 +52,7 @@ const CheckoutForm = () => {
       // This point will only be reached if there is an immediate error when
       // confirming the payment. Show error to your customer (for example, payment
       // details incomplete)
-      setErrorMessage("hjvjvj");
+      window.alert(error.message)
     } else {
       window.alert('updating')
        

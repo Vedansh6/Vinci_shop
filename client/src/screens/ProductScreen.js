@@ -70,14 +70,17 @@ function ProductScreen() {
         <MessageBox variant="danger">{error}</MessageBox>
        ): (
         <Row>
-        <Col md={6}>
+        <Col>
           <img
             className="img-large"
             src={product.image}
             alt={product.name}
           ></img>
         </Col>
-        <Col md={3}>
+        <Col>
+        <Row>
+        <Col>
+        
           <ListGroup variant="flush">
             <ListGroup.Item>
               <Helmet>
@@ -92,7 +95,7 @@ function ProductScreen() {
             </ListGroup.Item>
           </ListGroup>
         </Col>
-        <Col md={3}>
+        <Col>
           <Card>
             <Card.Body>
               <ListGroup variant="flush">
@@ -113,6 +116,8 @@ function ProductScreen() {
               </ListGroup>
             </Card.Body>
           </Card>
+        </Col>
+        </Row>
         </Col>
         </Row>
       );

@@ -18,7 +18,7 @@ const data = {
     products: [
       {
         //_id: '1',
-        name: 'The Last Suppppper',
+        name: 'The Last Supper',
         slug: 'the-last-supper',
         image: '/images/p1.jpg', // 679px × 829px
         price: 5000,
